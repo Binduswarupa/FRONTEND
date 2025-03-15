@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h2>DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE</h2>
+<h3>22-BATCH B-SECTION CLASS WEB PAGE</h3>
+
+<div style="position: fixed; top: 10px; right: 10px; cursor: pointer;" onclick="toggleSearchBox()">
+    🔍
+</div>
+
+<div id="searchContainer" style="display: none; position: fixed; top: 40px; right: 10px; background: white; padding: 10px; border: 1px solid black;">
+    <input type="text" id="searchBar" placeholder="Search for sites..." style="width: 200px; padding: 5px;" onkeypress="handleKeyPress(event)">
+</div>
+
+<marquee><p style="background-color:red; font-size: 14px;">WELCOME TO OUR CLASS PAGE (A PAGE WHERE ALL NOTES ARE AVAILABLE)</p></marquee>
+
+<style>
+table, th, td {
+    border: 3px solid green;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+
+<table style="width:100%" id="contentTable">
+<tr>
+<td><a href="https://lbrce.ac.in/academics/regulations/R20_BTECH_REGULATIONS.pdf">R20 REGULATION</a></td>
+<td><a href="https://lbrce.ac.in/academics/syllabus/R20/R20_AI&DS_Syllabus.pdf">COURSE STRUCTURE & SYLLABUS</a></td>
+<td><a href="https://lbrce.ac.in/ai/index.php">OUR DEPARTMENT SITE</a></td>
+<td><a href="https://erp.lbrce.ac.in/Login/">DAILY ATTENDANCE</a></td>
+</tr>
+</table>
+</center>
+
+<center>
+<table style="width:200px; height:200px;">
+<tr>
+<th>
+<marquee behavior="scroll" direction="left">
+<img src="C:\Users\swaru\Downloads\bindu.jpg" width="150" height="90">
+</marquee>
+</th>
+</tr>
+<tr>
+<td><center>LAKIREDDY BALIREDDY COLLEGE OF ENGINEERING</center>
+<center>DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE</center>
+<center>22-BATCH B-SECTION</center></td>
+</tr>
+</table>
+</center>
+
+<center>
+<table style="width:100%">
+<tr>
+<th>
+<a href="C:\Users\swaru\Desktop\WEBB\Topper.html">1. CLICK HERE FOR ACADEMIC RELATED INFO</a><br>
+<a href="file:///C:/Users/swaru/Desktop/WEBB/Courses.html">2. VI SEM COURSES</a>
+</th>
+</tr>
+</table>
+</center>
+
+<footer style="text-align:center; margin-top:10px; padding:5px; background-color:#f1f1f1; font-size: 14px;">
+    <p>✉️ Contact: 
+        <a href="mailto:swarupavemulapallii@gmail.com">swarupavemulapallii@gmail.com</a>, 
+        <a href="mailto:22761A54C9@lbrce.ac.in">22761A54C9@lbrce.ac.in</a>
+    </p>
+    <p>
+        <a href="https://www.linkedin.com/in/binduswarupavemulapalli/" target="_blank" style="font-size: 14px; font-weight: bold; color: blue; text-decoration: none;">Developer - Profile</a>
+    </p>
+</footer>
+
+<script>
+function toggleSearchBox() {
+    let searchContainer = document.getElementById("searchContainer");
+    if (searchContainer.style.display === "none") {
+        searchContainer.style.display = "block";
+    } else {
+        searchContainer.style.display = "none";
+    }
+}
+
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        searchFunction();
+    }
+}
+
+function searchFunction() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let links = document.getElementsByTagName("a");
+    let found = false;
+    
+    for (let link of links) {
+        if (link.textContent.toLowerCase().includes(input) && input !== "") {
+            window.location.href = link.href;
+            found = true;
+            break;
+        }
+    }
+    
+    if (!found && input !== "") {
+        alert("Please check the spelling");
+    }
+}
+</script>
+
+</body>
+</html>
